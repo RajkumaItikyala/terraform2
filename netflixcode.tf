@@ -1,13 +1,13 @@
 provider "aws" {
-region = "us-east-1"
+region = "us-east-1c"
 }
 
 resource "aws_instance" "one" {
 count = 5
-ami = "ami-0ddc798b3f1a5117e"
-instance_type = "t2.medium"
-key_name = "rahull"
-vpc_security_group_ids = ["sg-05f044979e305302e"]
+ami = "ami-0166fe664262f664c"
+instance_type = "t2.micro"
+key_name = "pometheus"
+vpc_security_group_ids = ["sg-0d8ccf80721044e69"]
 tags = {
 Name = var.instance_names[count.index]
 }
